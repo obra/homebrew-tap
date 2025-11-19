@@ -5,21 +5,21 @@
 class Packnplay < Formula
   desc "Development container tool with seamless AI coding agent support"
   homepage "https://github.com/obra/packnplay"
-  version "1.2.1-test"
+  version "1.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/obra/packnplay/releases/download/v1.2.1-test/packnplay_1.2.1-test_Darwin_x86_64.tar.gz"
-      sha256 "f44e1fffb8431341fc0c3414f2479c8788b31d7a1ce0691c4f0b5109f1ef0151"
+      url "https://github.com/obra/packnplay/releases/download/v1.2.0/packnplay_1.2.0_Darwin_x86_64.tar.gz"
+      sha256 "fcebfb39229c0479d64f825d015b79783bf173fbd4ad674235e62365db43d7d7"
 
       def install
         bin.install "packnplay"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/obra/packnplay/releases/download/v1.2.1-test/packnplay_1.2.1-test_Darwin_arm64.tar.gz"
-      sha256 "414a4b260b7918eb23ceb303a7c66ac58f7adffdb28b5eef577227275b1b8100"
+      url "https://github.com/obra/packnplay/releases/download/v1.2.0/packnplay_1.2.0_Darwin_arm64.tar.gz"
+      sha256 "5b7ed149167fb900c380ed0669341bcec8bd475ca0d9ce551adaef62c7e0eeae"
 
       def install
         bin.install "packnplay"
@@ -29,15 +29,15 @@ class Packnplay < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/obra/packnplay/releases/download/v1.2.1-test/packnplay_1.2.1-test_Linux_x86_64.tar.gz"
-      sha256 "edaf924341c6fbb80724608c57848e50aee7c01643de339e7caf113b31cd966b"
+      url "https://github.com/obra/packnplay/releases/download/v1.2.0/packnplay_1.2.0_Linux_x86_64.tar.gz"
+      sha256 "1cd8ff3d90c1582169ff489df30278cd537aa093c522673f9b832192e0c501cd"
       def install
         bin.install "packnplay"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/obra/packnplay/releases/download/v1.2.1-test/packnplay_1.2.1-test_Linux_arm64.tar.gz"
-      sha256 "32bfd864961cd952661ee0a0fedbe92abb90d584dd1d25e90490ebd5173678a5"
+      url "https://github.com/obra/packnplay/releases/download/v1.2.0/packnplay_1.2.0_Linux_arm64.tar.gz"
+      sha256 "95d9ee6a779c4a58bde6ed70b713c6b79169a24acd7167e2319b45227d29e3fa"
       def install
         bin.install "packnplay"
       end
@@ -45,6 +45,6 @@ class Packnplay < Formula
   end
 
   test do
-    system "#{bin}/packnplay", "version"
+    system "#{bin}/packnplay", "--version"
   end
 end
